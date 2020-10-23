@@ -17,6 +17,10 @@ class DdmAdbDebugWrapper(
         ClientData.setMethodProfilingHandler(MethodProfilingHandlerAdapter(handler, logger))
     }
 
+    override fun setProfilerBufferSizeMb(sizeInMb: Int) {
+        DdmPreferences.setProfilerBufferSizeMb(sizeInMb)
+    }
+
     private class MethodProfilingHandlerAdapter(
         private val innerHandler: MethodProfilingHandler,
         private val logger: AdbLogger

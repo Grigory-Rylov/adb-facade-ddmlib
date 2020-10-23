@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'com.github.grishberg.android'
-version '0.1.0'
+version '0.1.1'
 
 repositories {
     mavenCentral()
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    api 'com.github.Grigory-Rylov:adb-facade-core:0.1.3'
+    api 'com.github.Grigory-Rylov:adb-facade-core:0.1.7'
     // https://mvnrepository.com/artifact/com.android.tools.ddms/ddmlib
     implementation group: 'com.android.tools.ddms', name: 'ddmlib', version: '26.6.3'
 
