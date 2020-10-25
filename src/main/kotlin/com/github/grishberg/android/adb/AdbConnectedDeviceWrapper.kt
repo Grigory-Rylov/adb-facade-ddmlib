@@ -8,6 +8,8 @@ class AdbConnectedDeviceWrapper(
     private val device: IDevice,
     private val logger: AdbLogger
 ) : ConnectedDeviceWrapper {
+    override val serialNumber: String
+        get() = device.serialNumber
 
     override fun executeShellCommand(cmd: String, receiver: ShellOutReceiver) {
         device.executeShellCommand(cmd, IShellOutReceiverAdapter(receiver))
